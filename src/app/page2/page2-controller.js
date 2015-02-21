@@ -19,7 +19,7 @@ angular.module('hw6')
 
     menuProvider
       .add({
-        name: ['Страницы', 'Страница 2'],
+        name: ['Разделы', 'Страницы', 'Страница 2'],
         state: 'main.page2({par1: "to page2"})',
         permission: ''
       });
