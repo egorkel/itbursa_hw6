@@ -14,7 +14,7 @@ angular.module('hw6')
     };
   })
 
-  .config(function ($stateProvider) {
+  .config(function ($stateProvider, menuProvider) {
     $stateProvider
       .state('main.page1',
       {
@@ -24,6 +24,13 @@ angular.module('hw6')
         params: {
           par1: {value: ''}
         }
+      });
+
+    menuProvider
+      .add({
+        name: ['Страницы', 'Страница 1'],
+        state: 'main.page1({par1: "to page1"})',
+        permission: ''
       });
   })
 ;

@@ -1,7 +1,5 @@
 <div class="row">
   <ul class="list-inline h4">
-    <li><a ui-sref="main.page1({par1: 'to page1'})">Страница 1</a></li>
-    <li><a ui-sref="main.page2({par1: 'to page2'})">Страница 2</a></li>
-    <li><a ui-sref="main.page3({par1: 'to page3'})">Страница 3</a></li>
+    <li ng-repeat="item in items" ng-include="'components/navbar/menuitem.html'"></li>
   </ul>
 </div>

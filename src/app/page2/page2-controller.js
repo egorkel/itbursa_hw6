@@ -5,7 +5,7 @@ angular.module('hw6')
     $scope.mes = $stateParams.par1;
   })
 
-  .config(function ($stateProvider) {
+  .config(function ($stateProvider, menuProvider) {
     $stateProvider
       .state('main.page2',
       {
@@ -15,6 +15,13 @@ angular.module('hw6')
         params: {
           par1: {value: ''}
         }
+      });
+
+    menuProvider
+      .add({
+        name: ['Страницы', 'Страница 2'],
+        state: 'main.page2({par1: "to page2"})',
+        permission: ''
       });
   })
 ;
